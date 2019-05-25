@@ -45,7 +45,7 @@ body, html {
         let counter = 0;
 
         window.setInterval(() => {
-            document.getElementById('counter').innerHTML = `${counter} Ft`;
+            document.getElementById('counter').innerHTML = `${Math.round(counter)} Ft`;
             counter += interval * perTick;
         }, interval);
     })(); 
