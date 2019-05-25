@@ -1,15 +1,43 @@
 <html>
 <head>
 <title>Közpénz számláló</title>
+<style>
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    font-family: Arial;
+}
+
+#parent {
+    position: relative;
+}
+#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#caption {
+    font-size: 5rem;
+}
+
+#counter {
+    font-size: 8rem;
+}
+</style>
 </head>
 <body>
-	<div id="container">
-        <div id="caption">
-        Ennyi közpénzt tett zsebre Mészáros Lőrinc, mióta megnyitottad ezt az oldalt:
-        </div>
-        <div id="counter"></div>
-	</div>
-
+    <div id="parent">
+	    <div id="container">
+            <div id="caption">
+            Ennyi közpénzt tett zsebre Mészáros Lőrinc, mióta megnyitottad ezt az oldalt:
+            </div>
+            <div id="counter"></div>
+	    </div>
+    </div>
     <script>
     (function() {
         const perMinute = 304000, interval = 50;
