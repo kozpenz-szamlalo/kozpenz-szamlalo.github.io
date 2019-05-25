@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Közpénz számláló</title>
+</head>
+<body>
+	<div id="container">
+        <div id="caption">
+        Ennyi közpénzt tett zsebre Mészáros Lőrinc, mióta megnyitottad ezt az oldalt:
+        </div>
+        <div id="counter"></div>
+	</div>
+
+    <script>
+    (function() {
+        const perMinute = 304000, interval = 50;
+        const perTick = perMinute / 60000;
+        let counter = 0;
+
+        window.setInterval(() => {
+            document.getElementById('counter').innerHTML = `${counter} Ft`;
+            counter += interval * perTick;
+        }, interval);
+    })(); 
+    </script>
+</body>
+</html>
